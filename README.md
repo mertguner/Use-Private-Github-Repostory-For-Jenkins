@@ -21,7 +21,10 @@ Create Github private Repostory and include to Project .gitignore file from this
 
 CTRL+A and CTRL+V to Github
 
-ssh-keygen -t rsa -b 4096 -C "mertguner"
+open C:\Program Files\Git\git-bash.exe 
+
+ssh-keygen -t rsa -b 4096 -C "{GitHub User Name}"
+and press enter 3 times
 
 $ ssh-keygen -t rsa -b 4096 -C "mertguner"
 Generating public/private rsa key pair.
