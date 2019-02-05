@@ -19,6 +19,7 @@ Download Lastest Version of Github Desktop https://central.github.com/deployment
 
 Create Github private Repostory and include to Project .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
 
+CTRL+A and CTRL+V to Github
 
 ssh-keygen -t rsa -b 4096 -C "mertguner"
 
