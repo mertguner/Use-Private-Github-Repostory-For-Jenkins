@@ -1,6 +1,6 @@
 #  Using Jenkins With Private Github Repostory and Visual Studio
 
-Download Latest Version of Jenkins [Download](https://jenkins.io/download/thank-you-downloading-windows-installer-stable)
+1. Download Latest Version of Jenkins [Download](https://jenkins.io/download/thank-you-downloading-windows-installer-stable)
 [This Link](https://dzone.com/articles/how-to-install-jenkins-on-windows) for How to Install Jenkins on Windows 
 
 ## I used plugins for my project
@@ -16,48 +16,52 @@ Download Latest Version of Jenkins [Download](https://jenkins.io/download/thank-
 * Locale plugin
 
 
-Download Latest Version of Github Desktop [Download](https://central.github.com/deployments/desktop/desktop/latest/win32)
+2. Download Latest Version of Github Desktop [Download](https://central.github.com/deployments/desktop/desktop/latest/win32)
 
-Create Github private Repostory 
+3. Create private Github Repostory
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/01.png)
 
-and include to Project .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
+4. Create a file named ignore.
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/02.png)
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/03.png)
 
-CTRL+A and CTRL+V to Github
+5. Add all text to .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/04.png)
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/05.png)
 
-open C:\Program Files\Git\git-bash.exe 
+6. Open C:\Program Files\Git\git-bash.exe 
+- ssh-keygen -t rsa -b 4096 -C "{GitHub User Name}"
+- and press enter 3 times
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/06.png)
 
-ssh-keygen -t rsa -b 4096 -C "{GitHub User Name}"
-and press enter 3 times
+7. Open to Folder C:\Users\%USERNAME%\.ssh
 
-$ ssh-keygen -t rsa -b 4096 -C "mertguner"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/c/Users/Smit-Laptop/.ssh/id_rsa): [ENTER]
-Created directory '/c/Users/Smit-Laptop/.ssh'.
-Enter passphrase (empty for no passphrase): [ENTER]
-Enter same passphrase again: [ENTER]
-Your identification has been saved in /c/Users/Smit-Laptop/.ssh/id_rsa.
-Your public key has been saved in /c/Users/Smit-Laptop/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:RHMgUrHsHxawnk9ywPl63AhSKGnHnM09h6baJx6VNlE mertguner
-The key's randomart image is:
-+---[RSA 4096]----+
-|    ..=.+.E      |
-|   + O O =       |
-|  + * @ O .      |
-| . o + B *       |
-|    . B S        |
-|     + & =       |
-|    . = B .      |
-|     . =         |
-|      .          |
-+----[SHA256]-----+
+8. Create new Key in Github https://github.com/settings/keys **New SSH Key**
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/07.png)
 
-Goto C:\Users\Smit-Laptop\.ssh
+9. Open id_rsa.pub file with Text Editor.
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/08.png)
+- Copy All text
 
-id_rsa.pub file to https://github.com/settings/keys New SSH Key
+10. Paste all text to KEY Area. Title must be Github username
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/09.png)
 
-id_rsa file to http://localhost:8080/credentials/store/system/domain/_/      Add Credentials
-Kind = SSH Username with private key
+9. Open id_rsa file with Text Editor.
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/10.png)
+- Copy All text
 
+11. Open Jenkins > Credentials > System > Global credentials (unrestricted) [Shotcut Link for Localhost:8080](http://localhost:8080/credentials/store/system/domain/_/) 
+Click **Add Credentials**
 
-relay forward --bucket github-jenkins http://localhost:8080/github-webhook/
+12. ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/11.png)
+- Select "SSH Username with private key" to Kind
+- Check Enter directly 
+- Username is "{GitHub User Name}"
+- Past all text to Key Area
+
+13. Get ssh Link of private repository
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/12.png)
+
+14. Create New Jenkins Item
+- Change Source Code Management
+![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/Connect.gif)
