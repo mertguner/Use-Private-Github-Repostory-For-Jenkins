@@ -73,6 +73,6 @@ Click **Add Credentials**
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/12.png)
 
 14. Create New Jenkins Item
-- Change Source Code Management
+- Change **Source Code Management**
 
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/Connect.gif)
