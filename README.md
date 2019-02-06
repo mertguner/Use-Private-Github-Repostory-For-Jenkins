@@ -19,34 +19,43 @@
 2. Download Latest Version of Github Desktop [Download](https://central.github.com/deployments/desktop/desktop/latest/win32)
 
 3. Create private Github Repostory
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/01.png)
 
 4. Create a file named ignore.
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/02.png)
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/03.png)
 
 5. Add all text to .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/04.png)
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/05.png)
 
 6. Open C:\Program Files\Git\git-bash.exe 
 - ssh-keygen -t rsa -b 4096 -C "{GitHub User Name}"
 - and press enter 3 times
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/06.png)
 
 7. Open to Folder C:\Users\%USERNAME%\.ssh
 
-8. Create new Key in Github https://github.com/settings/keys **New SSH Key**
+8. Create new Key in Github https://github.com/settings/keys 
+- Click **New SSH Key**
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/07.png)
 
 9. Open id_rsa.pub file with Text Editor.
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/08.png)
 - Copy All text
 
 10. Paste all text to KEY Area. Title must be Github username
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/09.png)
 
 9. Open id_rsa file with Text Editor.
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/10.png)
 - Copy All text
 
@@ -60,8 +69,10 @@ Click **Add Credentials**
 - Past all text to Key Area
 
 13. Get ssh Link of private repository
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/12.png)
 
 14. Create New Jenkins Item
 - Change Source Code Management
+
 ![](https://github.com/mertguner/Private-Github-Repostory-For-Jenkins/raw/master/Images/Connect.gif)
