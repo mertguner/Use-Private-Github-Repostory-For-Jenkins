@@ -1,8 +1,7 @@
 #  Using Jenkins With Private Github Repostory and Visual Studio
 
-
-Download Lastest Version of Jenkins https://jenkins.io/download/thank-you-downloading-windows-installer-stable
-for How to Install Jenkins on Windows https://dzone.com/articles/how-to-install-jenkins-on-windows
+Download Latest Version of Jenkins [Download](https://jenkins.io/download/thank-you-downloading-windows-installer-stable)
+[This Link](https://dzone.com/articles/how-to-install-jenkins-on-windows) for How to Install Jenkins on Windows 
 
 ## I used plugins for my project
 * Email Extension Plugin
@@ -14,10 +13,14 @@ for How to Install Jenkins on Windows https://dzone.com/articles/how-to-install-
 * Publish Over FTP
 * change-assembly-version-plugin
 * Text File Operations
+* Locale plugin
 
-Download Lastest Version of Github Desktop https://central.github.com/deployments/desktop/desktop/latest/win32
 
-Create Github private Repostory and include to Project .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
+Download Latest Version of Github Desktop [Download](https://central.github.com/deployments/desktop/desktop/latest/win32)
+
+Create Github private Repostory 
+
+and include to Project .gitignore file from this link https://www.gitignore.io/api/csharp,windows,visualstudio
 
 CTRL+A and CTRL+V to Github
 
